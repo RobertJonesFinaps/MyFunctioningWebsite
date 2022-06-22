@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "mfing-website": "apps/mfing-website",
+    "mfing-website-e2e": "apps/mfing-website-e2e"
+  }
+}
