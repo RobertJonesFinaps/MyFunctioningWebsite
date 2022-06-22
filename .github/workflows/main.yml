@@ -9,14 +9,11 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: nrwl/nx-set-shas@v2
-      - run: npm ci
+      - script: yarn install
+        displayName: Yarn Install
+        workingDirectory: finaps
 
-      - run: npx nx workspace-lint
-      - run: npx nx format:check
-      - run: npx nx affected --target=lint --parallel=3
-      - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
-      - run: npx nx affected --target=build --parallel=3
+      - script: yarn test mfing-website 
+        displayName: Yarn Test
+        workingDirectory: finaps
+
