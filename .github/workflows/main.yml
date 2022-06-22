@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - script: yarn install
+        displayName: Yarn Install
+        workingDirectory: finaps
+
+      - script: yarn test mfing-website 
+        displayName: Yarn Test
+        workingDirectory: finaps
+
