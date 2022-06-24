@@ -16,7 +16,7 @@
           "apps/mfing-website/src/favicon.ico",
           "apps/mfing-website/src/assets"
         ],
-        "styles": ["apps/mfing-website/src/styles.css"],
+        "styles": ["apps/mfing-website/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
