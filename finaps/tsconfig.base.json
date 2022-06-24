@@ -14,7 +14,18 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@finaps/frontend/core": ["libs/frontend/core/src/index.ts"],
+      "@finaps/frontend/core/home": ["libs/frontend/core/home/src/index.ts"],
+      "@finaps/frontend/feat/home": ["libs/frontend/feat/home/src/index.ts"],
+      "@finaps/frontend/feat/rijks": ["libs/frontend/feat/rijks/src/index.ts"],
+      "@finaps/frontend/feat/strava": [
+        "libs/frontend/feat/strava/src/index.ts"
+      ],
+      "@finaps/frontend/rijks": ["libs/frontend/rijks/src/index.ts"],
+      "@finaps/frontend/routing": ["libs/frontend/routing/src/index.ts"],
+      "@finaps/frontend/strava": ["libs/frontend/strava/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

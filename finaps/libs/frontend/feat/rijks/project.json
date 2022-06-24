@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/frontend/feat/rijks/src",
+  "prefix": "finaps",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/frontend/feat/rijks"],
+      "options": {
+        "jestConfig": "libs/frontend/feat/rijks/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/frontend/feat/rijks/**/*.ts",
+          "libs/frontend/feat/rijks/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
