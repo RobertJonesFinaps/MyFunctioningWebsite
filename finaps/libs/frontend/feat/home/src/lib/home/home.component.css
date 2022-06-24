@@ -1,0 +1,7 @@
+:host {
+  --brand-primary: #420420;
+}
+
+h1 {
+  color: var(--brand-primary);
+}
