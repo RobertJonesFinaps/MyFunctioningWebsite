@@ -1,23 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'; // CLI imports router
-import { HomeComponent } from '../../../feat/home/src/lib/home/home.component';
+import { FrontendFeatHomeModule } from '@finaps/frontend/feat/home';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadComponent: () =>
+      import('@finaps/frontend/feat/home').then((m) => m.HomeComponent),
   },
+
   {
     path: 'strava',
     loadChildren: () =>
-      import('../../../feat/strava/src/lib/frontend-feat-strava.module').then(
+      import('@finaps/frontend/feat/strava').then(
         (m) => m.FrontendFeatStravaModule
       ),
   },
   {
     path: 'rijks',
     loadChildren: () =>
-      import('../../../feat/rijks/src/lib/frontend-feat-rijks.module').then(
+      import('@finaps/frontend/feat/rijks').then(
         (m) => m.FrontendFeatRijksModule
       ),
   },
