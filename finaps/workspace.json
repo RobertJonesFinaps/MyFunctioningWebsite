@@ -3,11 +3,14 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "backend-models": "libs/backend/models",
     "frontend-feat-home": "libs/frontend/feat/home",
     "frontend-feat-rijks": "libs/frontend/feat/rijks",
     "frontend-feat-strava": "libs/frontend/feat/strava",
     "frontend-routing": "libs/frontend/routing",
     "mfing-website": "apps/mfing-website",
-    "mfing-website-e2e": "apps/mfing-website-e2e"
+    "mfing-website-e2e": "apps/mfing-website-e2e",
+    "shared-models": "libs/shared/models",
+    "shared-utils": "libs/shared/utils"
   }
 }

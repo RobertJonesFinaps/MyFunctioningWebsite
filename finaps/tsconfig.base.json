@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@finaps/backend/models": ["libs/backend/models/src/index.ts"],
       "@finaps/frontend/core": ["libs/frontend/core/src/index.ts"],
       "@finaps/frontend/core/home": ["libs/frontend/core/home/src/index.ts"],
       "@finaps/frontend/feat/home": ["libs/frontend/feat/home/src/index.ts"],
@@ -24,7 +25,9 @@
       ],
       "@finaps/frontend/rijks": ["libs/frontend/rijks/src/index.ts"],
       "@finaps/frontend/routing": ["libs/frontend/routing/src/index.ts"],
-      "@finaps/frontend/strava": ["libs/frontend/strava/src/index.ts"]
+      "@finaps/frontend/strava": ["libs/frontend/strava/src/index.ts"],
+      "@finaps/shared/models": ["libs/shared/models/src/index.ts"],
+      "@finaps/shared/utils": ["libs/shared/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
