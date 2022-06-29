@@ -40,14 +40,8 @@ export class RijksService implements OnModuleInit {
   }
   getBiblios(query: Record<string, string>): any {
     return { msg: 'to be implemented' };
-    // return this.http.get<any>(
-    //   this.buildUrlString(process.env.RIJKS_BIBLIO_URL, query)
-    // );
   }
   getUserGenerated(query: Record<string, string>): any {
     return { msg: 'to be implemented' };
-
-    // return this.http.get<any>(
-    // );
   }
 }

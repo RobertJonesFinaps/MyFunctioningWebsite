@@ -19,7 +19,7 @@ export class RijksController {
     @Param('objectNum') objectId: string,
     @Body() body: CollectionDetailsDto
   ): Observable<any> {
-    return this.rijksService.getCollectionDetails(objectId, body).pipe(tap(console.log));
+    return this.rijksService.getCollectionDetails(objectId, body);
   }
 
   @Get('biblios')
