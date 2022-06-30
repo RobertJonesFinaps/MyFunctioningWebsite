@@ -1,7 +1,7 @@
 import { CollectionDetailsDto, CollectionDto } from '@finaps/backend/models';
 import { buildParameters } from '@finaps/shared/utils';
 import { HttpService } from '@nestjs/axios';
-import { Injectable, OnModuleInit } from '@nestjs/common';
+import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { map, Observable, retry, take } from 'rxjs';
 
 @Injectable()
@@ -14,6 +14,7 @@ export class RijksService implements OnModuleInit {
     this._key = process.env.RIJKS_API_KEY;
   }
   getCollection(body: CollectionDto): any {
+    Logger.log(body)
     const parameters = buildParameters(body);
     const url = `${this._baseUrl}/${body.culture}/collection?key=${this._key}&${parameters}`;    
     return this.http.get<any>(url).pipe(
