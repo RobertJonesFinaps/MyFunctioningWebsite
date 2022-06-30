@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {  FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'finaps-rijks-home',
@@ -6,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rijks-home.component.scss'],
 })
 export class RijksHomeComponent implements OnInit {
-  constructor() {}
+  searchForm!: FormGroup;
 
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+   this.searchForm = new FormGroup({
+    searchTerm: new FormControl(null)
+   })
+  }
+
+  onSubmit(): void {
+    console.log(this.searchForm)
+  }
 }

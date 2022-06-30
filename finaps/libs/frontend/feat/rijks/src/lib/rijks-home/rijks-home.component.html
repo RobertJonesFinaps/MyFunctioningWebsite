@@ -1,1 +1,4 @@
-<p>rijks-home works!</p>
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="searchTerm" />
+    <button type="submit">Search</button>
+</form>
