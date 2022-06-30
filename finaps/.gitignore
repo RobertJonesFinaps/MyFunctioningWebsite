@@ -39,9 +39,4 @@ testem.log
 Thumbs.db
 
 .angular
-
-# evn files
 .env
-.env.*
-
-
