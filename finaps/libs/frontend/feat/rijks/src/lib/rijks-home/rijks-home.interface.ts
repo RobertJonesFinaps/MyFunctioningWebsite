@@ -41,13 +41,13 @@ export interface CountFacets {
 }
 
 export interface CollectionFacet {
-    facets:     FacetFacet[];
+    facets:     CollectionFacetFacet[];
     name:       string;
     otherTerms: number;
     prettyName: number;
 }
 
-export interface FacetFacet {
+export interface CollectionFacetFacet {
     key:   string;
     value: number;
 }
