@@ -1,6 +1,6 @@
 import { CollectionDetailsDto, CollectionDto } from '@finaps/backend/models';
 import { Controller, Get, Param, Query } from '@nestjs/common';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { RijksService } from './rijks.service';
 /**
  * Controller for abstracting RijksData API
@@ -11,7 +11,7 @@ export class RijksController {
 
   @Get('collection')
   getCollection(@Query() body: CollectionDto): Observable<any> {
-    return this.rijksService.getCollection(body);
+    return this.rijksService.getCollection(body).pipe(tap(console.log));
   }
 
   @Get('collection/:objectNum')

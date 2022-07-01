@@ -2,7 +2,7 @@ import { CollectionDetailsDto, CollectionDto } from '@finaps/backend/models';
 import { buildParameters } from '@finaps/shared/utils';
 import { HttpService } from '@nestjs/axios';
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
-import { map, Observable, retry, take } from 'rxjs';
+import { map, Observable, retry, take , tap} from 'rxjs';
 
 @Injectable()
 export class RijksService implements OnModuleInit {
@@ -17,8 +17,10 @@ export class RijksService implements OnModuleInit {
     Logger.log(body)
     const parameters = buildParameters(body);
     const url = `${this._baseUrl}/${body.culture}/collection?key=${this._key}&${parameters}`;    
+    Logger.log(url)
     return this.http.get<any>(url).pipe(
       retry(1),
+      tap(console.log),
       map((res) => res['data']),
       take(1)
     );
