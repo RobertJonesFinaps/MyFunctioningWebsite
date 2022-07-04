@@ -1,4 +1,19 @@
-p {
-  font-size: 20px;
-  color: red;
+.image-grid {
+  display: grid;
+  grid-gap: 0.25rem;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, minmax(200, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200, 1fr));
+  overflow: hidden;
+}
+
+img {
+  max-height: 400px;
+  max-width: 400px;
+  object-fit: fill;
+}
+
+.search{
+  display: flex;
+  justify-content: space-between;
 }

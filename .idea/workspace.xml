@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b48be7f8-91be-4783-be3b-d6d5782b83aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/finaps/apps/api/src/app/rijks/rijks.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/finaps/apps/api/src/app/rijks/rijks.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finaps/apps/api/src/app/rijks/rijks.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/finaps/apps/api/src/app/rijks/rijks.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finaps/libs/frontend/feat/rijks/src/lib/rijks-home/rijks-home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/finaps/libs/frontend/feat/rijks/src/lib/rijks-home/rijks-home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finaps/libs/frontend/feat/rijks/src/lib/rijks-home/rijks-home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/finaps/libs/frontend/feat/rijks/src/lib/rijks-home/rijks-home.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finaps/libs/frontend/feat/rijks/src/lib/rijks-home/rijks-home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/finaps/libs/frontend/feat/rijks/src/lib/rijks-home/rijks-home.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656661177258</updated>
       <workItem from="1656661183163" duration="264000" />
+      <workItem from="1656932014995" duration="282000" />
     </task>
     <servers />
   </component>

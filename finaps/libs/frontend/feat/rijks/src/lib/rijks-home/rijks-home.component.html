@@ -1,5 +1,17 @@
-<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
-    <input type="text" formControlName="searchTerm" />
-    <button type="submit">Search</button>
-</form>
-<button type="button" (click)="searchWholeCollection()">Search Collection</button>
+<div class="search">
+    <form [formGroup]="searchForm" (ngSubmit)="searchByKeyword()">
+        <input type="text" formControlName="searchTerm" />
+        <button type="submit">Search By Keyword</button>
+    </form>
+    <button type="button" (click)="searchWholeCollection()">
+        Search Whole Collection
+    </button>
+</div>
+<div>
+    <span> Number of art objects retrieved {{ imageTitles.length }}</span>
+    <br />
+    <div *ngFor="let imageTitle of imageTitles">
+        <span>{{ imageTitle }}</span>
+        <div></div>
+    </div>
+</div>
