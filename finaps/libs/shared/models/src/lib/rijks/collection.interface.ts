@@ -58,3 +58,67 @@ export interface ICollection extends ICollectionBase {
     | 'artistdesc'
     | '';
 }
+
+
+export interface RijksCollection {
+  elapsedMilliseconds: number;
+  count:               number;
+  countFacets:         RijksCountFacets;
+  artObjects:          RijksArtObject[];
+  facets:              RijksCollectionFacet[];
+}
+
+export interface RijksArtObject {
+  links:                 RijksLinks;
+  id:                    string;
+  objectNumber:          string;
+  title:                 string;
+  hasImage:              boolean;
+  principalOrFirstMaker: string;
+  longTitle:             string;
+  showImage:             boolean;
+  permitDownload:        boolean;
+  webImage:              RijksImage;
+  headerImage:           RijksImage;
+  productionPlaces:      string[];
+}
+
+export interface RijksImage {
+  guid:              string;
+  offsetPercentageX: number;
+  offsetPercentageY: number;
+  width:             number;
+  height:            number;
+  url:               string;
+}
+
+export interface RijksLinks {
+  self: string;
+  web:  string;
+}
+
+export interface RijksCountFacets {
+  hasimage:  number;
+  ondisplay: number;
+}
+
+export interface RijksCollectionFacet {
+  facets:     RijksCollectionFacetFacet[];
+  name:       string;
+  otherTerms: number;
+  prettyName: number;
+}
+
+export interface RijksCollectionFacetFacet {
+  key:   string;
+  value: number;
+}
+
+export interface RijksCollectionResponse {
+  [key:string]: any;
+  status: any;
+  statusText: any;
+  headers: any;
+  config: any;
+  data: RijksCollection
+}

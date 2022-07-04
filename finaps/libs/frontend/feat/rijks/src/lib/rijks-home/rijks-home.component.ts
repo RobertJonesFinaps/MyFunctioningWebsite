@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { map} from 'rxjs';
-import { Collection, Image } from './rijks-home.interface';
-
+import { map } from 'rxjs';
+import { RijksCollection } from '@finaps/shared/models';
 @Component({
   selector: 'finaps-rijks-home',
   templateUrl: './rijks-home.component.html',
@@ -23,7 +22,7 @@ export class RijksHomeComponent implements OnInit {
 
   searchWholeCollection() {
     this.http
-      .get<Collection>('http://localhost:3333/api/rijks/collection', {
+      .get<RijksCollection>('http://localhost:3333/api/rijks/collection', {
         params: { culture: 'en', format: 'json' },
       })
       .pipe(
@@ -36,22 +35,22 @@ export class RijksHomeComponent implements OnInit {
       });
   }
 
-  searchByKeyword(){
-    const searchTerm = this.searchForm.get('searchTerm')?.value
+  searchByKeyword() {
+    const searchTerm = this.searchForm.get('searchTerm')?.value;
     this.http
-    .get<Collection>('http://localhost:3333/api/rijks/collection', {
-      params: { culture: 'en', format: 'json' , q: searchTerm},
-    })
-    .pipe(
-      map((collection) => {
-       return collection.artObjects.map((artObject) => artObject.title);
+      .get<RijksCollection>('http://localhost:3333/api/rijks/collection', {
+        params: { culture: 'en', format: 'json', q: searchTerm },
       })
-    )
-    .subscribe((imageTitles) => {
-      this.imageTitles = imageTitles;
-    });
+      .pipe(
+        map((collection) => {
+          return collection.artObjects.map((artObject) => artObject.title);
+        })
+      )
+      .subscribe((imageTitles) => {
+        this.imageTitles = imageTitles;
+      });
 
-    this.searchForm.reset()
+    this.searchForm.reset();
   }
 
   onSubmit(): void {

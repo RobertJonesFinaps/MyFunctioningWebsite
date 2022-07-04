@@ -1,2 +1,2 @@
-export { ICollection } from './collection.interface';
-export { ICollectionDetails } from './collection-detail.interface';
+export * from './collection.interface';
+export * from './collection-detail.interface';
